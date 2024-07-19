@@ -4,6 +4,7 @@ body, html {
     font-family: 'Open Sans', sans-serif;
     color: #333;
     overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
 }
 
 header {
@@ -56,8 +57,8 @@ header.scrolled .navbar ul li a {
 }
 
 .hero {
-    height: 100vh;
-    background: url('AI.jpeg') no-repeat center center/cover;
+    position: relative;
+    top: -450px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,15 +75,6 @@ header.scrolled .navbar ul li a {
 .hero h2 {
     font-size: 24px;
     margin-bottom: 40px;
-}
-
-.hero .btn {
-    background: #E91E63;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
 }
 
 .countdown {
@@ -123,6 +115,7 @@ header.scrolled .navbar ul li a {
 }
 
 .why-choose-us {
+    background-color: white;
     text-align: center;
     padding: 50px 0;
 }
@@ -165,37 +158,142 @@ header.scrolled .navbar ul li a {
     margin: 15px 0;
 }
 
-.the-event {
-    text-align: center;
-    padding: 30px 10px;
-    background-color: #f4f4f4;
-}
-
-.the-event h1{
-    font-size: 2em;
-    margin-bottom: 30px;
-}
-
-.the-event .events-desc{
-    font-size: 2em;
+.container-1 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
     display: grid;
-    grid-template-areas: 'one two three'
-    'four five six';
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    margin: auto;
+    padding: 2em;
 }
 
-.the-event .events-desc .events{
-    padding: 60px 30px;
+.card-container {
+    filter: drop-shadow(46px 36px 24px #4090b5) drop-shadow(-55px -40px 25px #9e30a9);
+    animation: blinkShadowsFilter 8s ease-in infinite;
+    margin-left: 180px;
 }
 
-.events button{
+.card-content {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+    padding: 1em;
+    grid-template-rows: auto 1fr auto;
+    background-color: hsl(296, 59%, 10%);
+    width: 10em;
+    aspect-ratio: 9/16;
+    position: relative;
+    clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+}
+
+.card-content::before {
+    content: "";
+    position: absolute;
+    width: 250%;
+    aspect-ratio: 1/1;
+    transform-origin: center;
+    background: linear-gradient(to bottom, transparent, transparent, #66e0ff, #66e0ff, #e366ff, #e366ff, transparent, transparent), linear-gradient(to left, transparent, transparent, #66e0ff, #66e0ff, #e366ff, #e366ff, transparent, transparent);
+    animation: rotate 5s infinite linear;
+}
+
+.card-content::after {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: 98%;
+    height: 98%;
+    background: repeating-linear-gradient(to bottom, transparent 0%, rgba(64, 144, 181, 0.6) 1px, rgb(0, 0, 0) 3px, rgba(64, 144, 181, 0.3019607843) 5px, #153544 4px, transparent 0.5%), repeating-linear-gradient(to left, hsl(295, 60%, 12%) 100%, hsla(295, 60%, 12%, 0.99) 100%);
+    box-shadow: inset 0px 0px 30px 40px hsl(296, 59%, 10%);
+    clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
+    animation: backglitch 94ms linear infinite;
+}
+
+.card-title {
+    z-index: 80;
+    clip-path: polygon(90% 0, 100% 100%, 0% 100%, 0% 0%);
+    background: linear-gradient(90deg, rgba(255, 254, 250, 0) 0%, rgba(102, 224, 255, 0.3) 27%, rgba(102, 224, 255, 0.3) 63%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(102, 224, 255, 0.3) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 96%, rgba(102, 224, 255, 0.3) 100%);
+    width: 98%;
+    font-size: 1.2em;
+}
+
+.title {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    position: relative;
+    z-index: 2;
+    color: hsl(192, 100%, 88%);
+    font-size: 1em;
+    transition: all ease-in-out 2s linear;
+}
+
+.card-body {
+    z-index: 80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body button {
     padding: 10px;
     border-radius: 20px;
     background-color: #E91E63;
     color: #ffffff;
 }
 
+@keyframes backglitch {
+    0% {
+        box-shadow: inset 0px 20px 30px 40px hsl(296, 59%, 10%);
+    }
+
+    50% {
+        box-shadow: inset 0px -20px 30px 40px hsl(296, 59%, 10.2%);
+    }
+
+    to {
+        box-shadow: inset 0px 20px 30px 40px hsl(296, 59%, 10%);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate(-50%, 20%);
+    }
+
+    50% {
+        transform: rotate(180deg) translate(40%, 10%);
+    }
+
+    to {
+        transform: rotate(360deg) translate(-50%, 20%);
+    }
+}
+
+@keyframes blinkShadowsFilter {
+    0% {
+        filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #9e30a9);
+    }
+
+    25% {
+        filter: drop-shadow(46px -36px 24px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-55px 40px 24px #9e30a9);
+    }
+
+    50% {
+        filter: drop-shadow(46px 36px 30px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-55px 40px 30px rgba(159, 48, 169, 0.2941176471));
+    }
+
+    75% {
+        filter: drop-shadow(20px -18px 25px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-20px 20px 25px rgba(159, 48, 169, 0.2941176471));
+    }
+
+    to {
+        filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #9e30a9);
+    }
+}
 .schedules{
     display: flex;
     justify-content: space-around;
@@ -238,15 +336,48 @@ header.scrolled .navbar ul li a {
     background-color: #666;
 }
 
-.guidelines{
-    text-align: center;
+.faq-container {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
 }
 
-.event-guidelines{
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    justify-content: space-around;
-    padding: 50px 0;
+details {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+summary {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+details[open] summary {
+    color: #E91E63;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-content {
+    padding-top: 10px;
+    padding-left: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+details[open] .faq-content {
+    max-height: 500px;
 }
 
 footer {
