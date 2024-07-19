@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Symposium Website</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Event Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div id="particles-js"></div>
     <header>
         <div class="container">
             <div class="navbar">
@@ -25,15 +28,13 @@
                 </nav>
             </div>
         </div>
-    </header>    
+    </header>
     <section class="landing-page">
         <div class="hero">
-            <h1>Global Grand Event on Digital Design</h1>
+            <h1>AIRO 4.0</h1>
             <h2>BOOK YOUR SEAT NOW!</h2>
-            <button class="btn">Explore</button>
         </div>
     </section>
-        </div>
     <section class="countdown">
         <h2>EVENT WILL START IN</h2>
         <div class="countdown-timer">
@@ -93,41 +94,68 @@
             <p>Lorem ipsum dolor sit amet, consectetur commodo ligula eget dolor.</p>
         </div>
     </section>
-    <section class="the-event">
-        <h1>Events</h1>
-        <div class="events-desc">
-            <div class="events">
-                <img alt="first-event">
-                <h4>Bid and Code</h4>
-                <button>Know More</button>
-            </div>            
-            <div class="events">
-                <img alt="second-event">
-                <h4>Connect with Prompt</h4>
-                <button>Know More</button>
-            </div>            
-            <div class="events">
-                <img alt="third-event">
-                <h4>Technical Auction</h4>
-                <button>Know More</button>
-            </div>            
-            <div class="events">
-                <img alt="fouth-event">
-                <h4>Rapid AI</h4>
-                <button>Know More</button>
-            </div>            
-            <div class="events">
-                <img alt="fiveth-event">
-                <h4>Blind Fold</h4>
-                <button>Know More</button>
-            </div>            
-            <div class="events">
-                <img alt="sixth-event">
-                <h4>Reel VS Real</h4>
-                <button>Know More</button>
-            </div>            
+    <section class="container-1">
+        <div class="card-container">
+            <div class="card-content">
+                <div class="card-title">
+                    <span class="title">Bid and Code</span>
+                </div>
+                <div class="card-body">
+                    <button>Know More</button>
+                </div>
+            </div>
         </div>
-    </section>
+        <div class="card-container">
+            <div class="card-content">
+                <div class="card-title">
+                    <span class="title">Connect with Prompt</span>
+                </div>
+                <div class="card-body">
+                    <button>Know More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card-content">
+                <div class="card-title">
+                    <span class="title">Technical Auction</span>
+                </div>
+                <div class="card-body">
+                    <button>Know More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card-content">
+                <div class="card-title">
+                    <span class="title">Rapid AI</span>
+                </div>
+                <div class="card-body">
+                    <button>Know More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card-content">
+                <div class="card-title">
+                    <span class="title">Blind Fold</span>
+                </div>
+                <div class="card-body">
+                    <button>Know More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card-content">
+                <div class="card-title">
+                    <span class="title">Reel VS Real</span>
+                </div>
+                <div class="card-body">
+                    <button>Know More</button>
+                </div>
+            </div>
+        </div>
+    </section>      
     <section class="schedules">
         <div class="location">
             <img src="Map Location.png" alt="Location">
@@ -166,23 +194,41 @@
             </div>
         </div>
     </section>
-    <section class="guidelines">
-        <h1>Event Guidelines</h1>
-        <div class="event-guidelines">
-            <div class="guidlines-image">
-                <img alt="event">
+    <section class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        <details>
+            <summary>What is the event about?</summary>
+            <div class="faq-content">
+                The event is focused on showcasing various technical skills through competitions and workshops.
             </div>
-            <div class="guidlines-paragraphs">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque saepe non veniam. Totam ab alias similique, excepturi qui id pariatur eaque est dolore, omnis in sint ea? Similique, praesentium quam?</p>
-                <ul>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                </ul>
+        </details>
+        <details>
+            <summary>Who can participate in the event?</summary>
+            <div class="faq-content">
+                The event is open to all students and professionals interested in technology and innovation.
             </div>
-        </div>
+        </details>
+        <details>
+            <summary>How do I register for the event?</summary>
+            <div class="faq-content">
+                You can register for the event through our official website. Visit the registration page and fill out the required details.
+            </div>
+        </details>
+        <details>
+            <summary>What is the schedule for the event?</summary>
+            <div class="faq-content">
+                The event schedule will be shared on our website and social media channels. Stay tuned for updates.
+            </div>
+        </details>
+        <details>
+            <summary>Is there any participation fee?</summary>
+            <div class="faq-content">
+                Yes, there is a nominal participation fee for the event. The fee details are available on the registration page.
+            </div>
+        </details>
+    
     </section>
+    </main>
     <footer>
         <div class="footer-container">
             <div class="footer-section about">
@@ -232,5 +278,7 @@
         </div>
     </footer>
     <script src="script.js"></script>
+</body>
+</html>
 </body>
 </html>
