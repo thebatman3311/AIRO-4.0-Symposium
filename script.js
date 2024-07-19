@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", () => {
+  particlesJS.load("particles-js", "particle.json", function () {
+    console.log("particles.js config loaded");
+  });
+});
+
 document.addEventListener("scroll", () => {
   const header = document.querySelector("header");
   if (window.scrollY > 0) {
