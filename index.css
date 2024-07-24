@@ -24,7 +24,7 @@ header.scrolled {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px;
+    padding: 10px 20px;
     width: 100%;
 }
 
@@ -38,7 +38,7 @@ header.scrolled {
 .navbar ul {
     list-style: none;
     display: flex;
-    margin-right: 150px;
+    margin-right: 50px;
     padding: 0;
 }
 
@@ -47,13 +47,25 @@ header.scrolled {
 }
 
 .navbar ul li a {
+    padding: 10px;
+    border-radius: 25px;
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-weight: 600;
+}
+
+.navbar ul li a:hover{
+    color: black;
+    background-color: white;
 }
 
 header.scrolled .navbar ul li a {
     color: black;
+}
+
+header.scrolled .navbar ul li a:hover {
+    background-color: black;
+    color: white;
 }
 
 .hero {
@@ -114,17 +126,6 @@ header.scrolled .navbar ul li a {
     color: #666;
 }
 
-.about-us {
-    background-color: white;
-    text-align: center;
-    padding: 50px 0;
-}
-
-.about-us h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
 .about-department {
     display: flex;
     align-items: center;
@@ -132,7 +133,7 @@ header.scrolled .navbar ul li a {
     padding: 50px 0;
     background-color: #000000;
     gap: 30px;
-    margin: 20px 20px 0px 20px;
+    margin: 20px;
 }
 
 .department-photo {
@@ -147,8 +148,23 @@ header.scrolled .navbar ul li a {
     box-shadow: 0 0 10px rgba(176, 174, 174, 0.1);
 }
 
-.department-description {
+.department-content {
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.department-content h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.department-description {
+    text-align: left;
+    color: white;
 }
 
 .department-description h3 {
@@ -175,7 +191,7 @@ header.scrolled .navbar ul li a {
 .card-container {
     filter: drop-shadow(46px 36px 24px #4090b5) drop-shadow(-55px -40px 25px #9e30a9);
     animation: blinkShadowsFilter 8s ease-in infinite;
-    margin-left: 85px;
+    margin-left: 120px;
 }
 
 .card-content {
